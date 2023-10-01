@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>JoeyAsher</title>
     <link rel="stylesheet" href="styles.css"> <!-- You can link to an external CSS file if you have one -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> <!-- Link to Quicksand font from Google Fonts -->
     <style>
+
+        @font-face {
+            font-family: 'Quicksand';
+            src: url('/Users/joeyasher/Desktop/Website/JoeyAsher.github.io/Quicksand/static/Quicksand-Medium.ttf') format('truetype');
+        }
+
         /* Add inline CSS for simple styling */
         body {
             font-family: Arial, sans-serif;
@@ -15,10 +22,15 @@
         }
 
         header {
-            background-color: #333;
-            color: white;
-            text-align: center;
+            
+            background-color: #fff;
+            color: black;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.2em;
+            text-decoration: underline;
+            text-align: left;
             padding: 1em 0;
+            
         }
 
         h1 {
@@ -99,23 +111,25 @@
     </style>
 </head>
 <body>
+    
     <header>
-        <h1>Joey Asher - Designs and Projects</h1>
+        </h1>Joey Asher</h1>
+        <nav>
+            <!-- Navigation Links -->
+            <ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="cameragimble1.html">Camera Gimble Version 1</a>
+                        <!-- Add more project links as needed -->
+                    </div>
+                </li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <!-- Navigation Links -->
-        <ul>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Projects</a>
-                <div class="dropdown-content">
-                    <a href="cameragimble1.html">Camera Gimble Version 1</a>
-                    <!-- Add more project links as needed -->
-                </div>
-            </li>
-            <!-- Add more navigation links as needed -->
-        </ul>
-    </nav>
+
 
     <main>
         <section id="About me">
