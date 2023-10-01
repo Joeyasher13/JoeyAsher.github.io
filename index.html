@@ -46,6 +46,39 @@
             color: #fff;
         }
 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+
         main {
             padding: 2em;
             max-width: 800px;
@@ -71,30 +104,66 @@
     </header>
 
     <nav>
-        <!-- You can add navigation links here -->
+        <!-- Navigation Links -->
         <ul>
-            <a href="cameragimble1.html">Go to Camera Gimble Version 1</a>
-            <li><a href="#section2">Section 2</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="cameragimble1.html">Camera Gimble Version 1</a>
+                    <!-- Add more project links as needed -->
+                </div>
+            </li>
             <!-- Add more navigation links as needed -->
         </ul>
     </nav>
 
     <main>
-        <section id="section1">
-            <h2>Section 1</h2>
-            <p>This is the content of section 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex sed augue scelerisque congue.</p>
-        </section>
+        <section id="About me">
+            <h2>About me</h2>
+            <p>My name is Joey Asher, I am an undregraduate student at Colorado School of Mines studying Electrical Engineering. This website is going to 
+                serve as a place to orangize and store some of my projects that I have worked on.  </p>
 
-        <section id="section2">
-            <h2>Section 2</h2>
-            <p>This is the content of section 2. Nulla nec libero id elit facilisis fringilla. Vivamus scelerisque elit sit amet sapien aliquam, vel blandit augue egestas.</p>
+
+            <p>Connect with me on:</p>
+            <ul class="social-links">
+                <li><a href="https://github.com/Joeyasher13" target="_blank"><img src="github-logo.png" alt="GitHub" style="width: 32px; height: 32px;"> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/joey-asher-11789721b/" target="_blank"><img src="linkedin.png" alt="LinkedIn" style="width: 32px; height: 32px;"> LinkedIn</a></li>
+            </ul>
+            <p>Find some of my 3D models on GrabCad</p>
+            <li><a href="https://grabcad.com/joey.asher-1" target="_blank"><img src="grabcad-logo-1.png" alt="GrabCad" style="width: 64px; height: 64px;"> GrabCad</a></li>
+
         </section>
 
         <!-- Add more sections/content as needed -->
     </main>
 
     <footer>
-        <p>&copy; 2023 Your Name</p>
+        <p>&copy; 2023 JAE Manufacturing and Design, Joey Asher</p>
     </footer>
+
+    <script>
+        // JavaScript for dropdown menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function(dropdown) {
+                var dropbtn = dropdown.querySelector('.dropbtn');
+                var dropdownContent = dropdown.querySelector('.dropdown-content');
+
+                dropbtn.addEventListener('click', function() {
+                    dropdownContent.classList.toggle('show');
+                });
+
+                // Close the dropdown menu if the user clicks outside of it
+                window.addEventListener('click', function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var openDropdown = document.querySelector('.dropdown-content.show');
+                        if (openDropdown && openDropdown.parentElement === dropdown) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
