@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('/Users/joeyasher/Desktop/Website/JoeyAsher.github.io/Quicksand/static/Quicksand-Medium.ttf') format('truetype');
+    src: url('Quicksand/static/Quicksand-Medium.ttf') format('truetype');
 }
 
 /* Add styles for body */
@@ -10,44 +10,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 /* Styles for the header */
 header {
-    display: flex;
-    align-items: center; /* Center vertically */
-    background-color: #444; /* Background color for the header */
-    color: white; /* Text color for the header */
-    padding: 1em; /* Add padding to the header */
+    
+    display: inline-flex;
+    background-color: #fff; /* Background color for the header */
+    font-family: 'Quicksand', sans-serif; 
+    color: rgb(23, 23, 23); /* Text color for the header */
 }
 
 /* Styles for the title */
 h1 {
     margin: 0;
+    text-decoration: underline;
     font-size: 2em; /* Increase the font size for the name */
+}
+
+nav {
 }
 
 /* Styles for navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    display: inline-flex;
+    gap: 1em;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 1em;
-}
 
 a {
+    
     text-decoration: none;
-    color: white;
+    
+    color: rgb(23, 23, 23);
 }
 
 /* Center the "Projects" dropdown menu */
 .dropdown {
     display: flex;
-    align-items: center; /* Center vertically */
+    align-items: right; /* Center vertically */
 }
 
 .dropbtn {
@@ -57,7 +59,7 @@ a {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #fff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -71,7 +73,7 @@ a {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 .show {
