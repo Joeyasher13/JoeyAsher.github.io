@@ -48,6 +48,14 @@ img {
     box-sizing: content-box;
     display: block;
 }
+/* Restrict the size of the image inside the <a> element */
+#CNCPNG {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    display: block;
+    max-width: 94pt;
+}
 
 
 /* Styles for navigation */
@@ -124,7 +132,15 @@ li {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    display: list-item;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff; /* Background color for the header */
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(23, 23, 23); /* Text color for the header */
+    padding-top: 17px;
+    padding-right: 17px;
+    padding-bottom: 17px;
+    padding-left: 17px;
 }
 
 /* Style the <p> elements inside the projectLink section */
