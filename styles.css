@@ -129,10 +129,10 @@ li {
 
 /* Apply styles to the projectLink section */
 .projectLink {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    display: inline-block;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    display: block;
     text-align: center;
     background-color: #fff; /* Background color for the header */
     font-family: 'Quicksand', sans-serif;
@@ -153,9 +153,12 @@ li {
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+    border-radius: 5px;
 }
 
-
+.projectDescription {
+    max-width: 400pt;
+}
 
 
 /* Additional styles for main content, sections, and footer */
