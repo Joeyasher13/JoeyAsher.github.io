@@ -24,11 +24,23 @@ header {
 
 /* Styles for the title */
 h1 {
-    margin: 0;
-    text-decoration: underline;
-    font-size: 2em; /* Increase the font size for the name */
+	text-decoration: underline;
+	font-size: 2em; /* Increase the font size for the name */
+	border-top-left-radius: 0px;
+	padding-left: 30px;
 }
 
+img {
+	height: auto;
+	float: none;
+	clear: none;
+	border-width: medium;
+	padding-left: 0px;
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+	padding-right: 0px;
+  }
 
 /* Styles for navigation */
 nav ul {
@@ -38,10 +50,17 @@ nav ul {
 
 
 a {
-    
-    text-decoration: none;
-    
-    color: rgb(23, 23, 23);
+	text-decoration: none;
+	color: rgb(23, 23, 23);
+	padding-bottom: 0px;
+	padding-top: 18px;
+	padding-left: 0px;
+	left: 0mm;
+	right: 0mm;
+	bottom: 0mm;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 
