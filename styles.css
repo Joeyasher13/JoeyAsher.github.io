@@ -46,6 +46,13 @@ a {
     color: rgb(23, 23, 23);
 }
 
+
+li {
+    
+    text-decoration: none;
+    color: rgb(23, 23, 23);
+}
+
 /* Center the "Projects" dropdown menu */
 .dropdown {
     display: flex;
@@ -75,6 +82,13 @@ a {
 .dropdown-content a:hover {
     background-color: #fff;
 }
+
+
+.social-links {
+    list-style-type: none;
+    padding: 1em; /* Remove default padding */
+}
+
 
 .show {
     display: block;
