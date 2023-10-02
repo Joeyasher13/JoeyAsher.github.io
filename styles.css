@@ -31,17 +31,21 @@ h1 {
 }
 
 img {
-	height: auto;
-	float: none;
-	clear: none;
-	padding-left: 0px;
-	-webkit-box-sizing: inherit;
-	-moz-box-sizing: inherit;
-	box-sizing: inherit;
-	padding-right: 0px;
-	-webkit-box-shadow: 0px 0px #FFFFFF;
-	box-shadow: 0px 0px #FFFFFF;
+    width: 100%;
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Remove any extra spacing around the image */
+    margin: 0 auto; /* Center the image horizontally if needed */
+    padding-top: 0px;
   }
+
+
+#CameraGimble {
+    width: 200px; /* Set the desired width */
+    height: auto; /* Maintain the aspect ratio */
+    padding-bottom: 5px;
+    padding-top: 0px;
+}
 
 /* Styles for navigation */
 nav ul {
@@ -115,13 +119,15 @@ li {
 /* Additional styles for main content, sections, and footer */
 main {
     padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
     background-color: #fff;
+    float: none;
+    clear: none;
 }
 
 section {
     margin-bottom: 2em;
+    display: block;
+    padding-right: 0px;
 }
 
 footer {
@@ -129,4 +135,14 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
+}
+.CameraGimble {
+    float: none;
+    padding-left: 0px;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    padding-bottom: 0px;
+    display: inline;
+    height: auto;
 }
