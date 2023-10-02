@@ -34,12 +34,13 @@ img {
 	height: auto;
 	float: none;
 	clear: none;
-	border-width: medium;
 	padding-left: 0px;
 	-webkit-box-sizing: inherit;
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 	padding-right: 0px;
+	-webkit-box-shadow: 0px 0px #FFFFFF;
+	box-shadow: 0px 0px #FFFFFF;
   }
 
 /* Styles for navigation */
