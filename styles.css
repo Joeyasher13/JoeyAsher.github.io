@@ -57,6 +57,15 @@ img {
     max-width: 94pt;
 }
 
+#CameraGimblePCB {
+    max-width: 400px; /* Set the maximum height to your desired value */
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    display: inline-block;
+    padding-left: 352px;
+}
+
 
 /* Styles for navigation */
 nav ul {
@@ -66,17 +75,16 @@ nav ul {
 
 
 a {
-	text-decoration: none;
-	color: rgb(23, 23, 23);
-	padding-bottom: 0px;
-	padding-top: 18px;
-	padding-left: 0px;
-	left: 0mm;
-	right: 0mm;
-	bottom: 0mm;
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
+    text-decoration: underline;
+    color: rgb(23, 23, 23);
+    padding-bottom: 0px;
+    padding-left: 0px;
+    left: 0mm;
+    right: 0mm;
+    bottom: 0mm;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 
@@ -144,7 +152,7 @@ li {
 }
 
 /* Style the <p> elements inside the projectLink section */
-.projectLoyout {
+.projectLayout {
     display: inline-block;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -156,8 +164,25 @@ li {
     border-radius: 5px;
 }
 
+
+.projectObject1 {
+    display: block;
+    float: none;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    padding-top: 17px;
+    padding-right: 17px;
+    padding-bottom: 17px;
+    padding-left: 17px;
+}
+
 .projectDescription {
-    max-width: 400pt;
+    max-width: 473pt;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 
