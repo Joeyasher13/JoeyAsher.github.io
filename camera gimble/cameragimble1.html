@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 2 - Joey Asher - Designs and Projects</title>
-    <link rel="stylesheet" href="styles.css"> <!-- You can link to an external CSS file if needed -->
+    <link rel="stylesheet" href="../styles.css"> <!-- You can link to an external CSS file if needed -->
 <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -29,26 +29,26 @@ function MM_swapImage() { //v3.0
 }
 </script>
 </head>
-<body onLoad="MM_preloadImages('Camera Gimble Images/back.png')">
+<body onLoad="MM_preloadImages('../Camera Gimble Images/back.png')">
 
     
-    <header>
-        <h1>Joey Asher</h1>
+<header>
+  <h1>Joey Asher</h1>
     
-        <nav>
+      <nav>
             <ul>
-                <a href="index.html">Home</a>
-                <a href="aboutme.html">About</a>
+              <a href="../index.html">Home</a>
+              <a href="../aboutme.html">About</a>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                  <a href="javascript:void(0)" class="dropbtn">Projects</a>
                     <div class="dropdown-content">
-                        <a href="cameragimble1.html">Camera Gimble Version 1</a>
-                        <a href="cncrouter.html">CNC Router</a>
+                      <a href="../camera gimble/cameragimble1.html">Camera Gimble Version 1</a>
+                      <a href="../CNC router/cncrouter.html">CNC Router</a>
                         <!-- Add more project links as needed -->
                     </div>
 				</li>
             </ul>
-        </nav>
+      </nav>
     </header>
     
 
@@ -64,7 +64,15 @@ function MM_swapImage() { //v3.0
 				 <p>As this is the initial iteration of the Camera Gimbal Controller, the project’s focus remains intentionally narrow. The primary objective is to create a precise prototype capable of controlling two brushless motors while concurrently gaining experience with the ESP32-S2 microcontroller and the ICM- 20948 9-axis sensor. The gimbal system will actively adjust the camera’s orientation along two axes by utilizing feedback from an accelerometer, gyroscope, and magnetometer. Sensor data will be processed by an ESP32-S2 microcontroller and then translated into motor control signals to drive the brushless motor drivers&nbsp;</p>
 			</section>
 
-	    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('CameraGimblePCB','','Camera Gimble Images/back.png',1)"><img id="CameraGimblePCB" src="Camera Gimble Images/front.png" alt=""></a> </section>
+	    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('CameraGimblePCB','','../camera gimble/Camera Gimble Images/back.png',1)"><img id="CameraGimblePCB" src="../camera gimble/Camera Gimble Images/front.png" alt=""></a> 
+		</section>
+		
+		
+		<section class="projectObject1">
+			<p>If you would like to read more about the design considerations that went into making the PCB's in this project, you can find a short paper<a href="CameraGimbleV1.pdf">here.</a> This document focuses on the the inddividual IC's on the board and how they communicate with eachother to control the two motors.</p>
+			
+		</section>
+
 			
 	</main>
 

@@ -77,14 +77,16 @@ nav ul {
 a {
     text-decoration: underline;
     color: rgb(23, 23, 23);
-    padding-bottom: 0px;
-    padding-left: 0px;
+    padding-bottom: 6px;
+    padding-left: 6px;
     left: 0mm;
     right: 0mm;
     bottom: 0mm;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+    padding-right: 6px;
+    padding-top: 5px;
 }
 
 
