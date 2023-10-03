@@ -191,7 +191,6 @@ li {
 .rightIMG {
     max-width: 400pt;
     display: inline-block;
-    text-align: right; /* This centers the content (image) inside the div horizontally */
     padding-left: 175px;
 }
 
