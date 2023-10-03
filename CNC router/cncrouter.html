@@ -36,11 +36,22 @@
 				<h2>CNC Router</h2>
 
 
-				 <p> This project was a fun one, in it I built a CNC router with a workable volume of 46" x 46" x 4". Although most of the hardware for this project was bought from a supplier in China, the electronics where all build and designed by me. To get a better understanding of whats under the hood of a CNC machine, I used<a href="https://linuxcnc.org">LinuxCNC</a> as the control software. I put a lot of time into organizing all of the electronics into a control box, and although it doesn't look like a traditional controls box , it does a good job oraganizing all of the electronic components.</p>
+				 <p>This project was a fun one, in it I built a CNC router with a workable volume of 46" x 46" x 4". Although most of the hardware for this project was bought from a supplier in China, the electronics where all build and designed by me. To get a better understanding of whats under the hood of a CNC machine, I used<a href="https://linuxcnc.org">LinuxCNC</a> as the control software. I put a lot of time into organizing all of the electronics into a control box, and although it doesn't look like a traditional controls box, it does a good job oraganizing all of the electronic components.</p>
 				 
 			</section>
 
-        <img id="CNCrouterIMG" src="CNC Router Images/CNCrouter.png" alt=""/> </section>
+        <img class="rightIMG" src="CNC Router Images/CNCrouter.png" alt=""/>
+		</section>
+		
+		
+		<p>It was decied for the project to use split phase 240 VAC as the power for the router. It probably could have worked to run it on 120 VAC, but this gave me an me an excuse to get my parents to install a dedicated 50A 240VAC outlet in the garage. I am still trying to convince them to buy a welder, which is the second part to my master plan, but for now at least I have more than enough power for my CNC. The following hand-drawn schematic shows the basic power distribution for the system. Note that there are 4 breakers total, There is a 2 phase 40A breaker on the input, a 5A 2 phase breaker for the DC power supply, a 20A single phase breaker for the router, and finally a 20A single phase breaker to power a vacuum. This isn't the most detailed schematic, so some signals might be not be included, but it does give a good sense of the flow of power. An<a href="https://www.antekinc.com/ps-8n56-800w-56v-power-supply/">AnTek 800W 56V DC power supply</a>was used for this router to power the stepper motors. In addition, this power supply has 24V and 5V rails that are used for powering all the other DC components in the system.</p>
+		
+		<img class="centerIMG" src="CNC Router Images/AC Schematic.jpg" alt=""/>
+		
+		
+		
+		
+		
 
 	</main>
 
