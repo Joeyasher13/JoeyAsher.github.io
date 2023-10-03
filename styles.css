@@ -197,7 +197,8 @@ li {
 .rightIMG {
     max-width: 400pt;
     display: inline-block;
-    padding-left: 175px;
+    padding-left: 233px;
+    border-radius: 31px;
 }
 
 .centerIMG {
