@@ -182,10 +182,16 @@ li {
 
 .projectDescription {
     max-width: 473pt;
+	
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
+}
+.leftText {
+    max-width: 473pt;
+    display: inline-block;
+    float: left;
 }
 
 .rightIMG {
