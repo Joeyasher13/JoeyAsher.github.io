@@ -72,6 +72,11 @@ function MM_swapImage() { //v3.0
 			<p>If you would like to read more about the design considerations that went into making the PCB's in this project, you can find a short paper<a href="CameraGimbleV1.pdf">here.</a> This document focuses on the the inddividual IC's on the board and how they communicate with eachother to control the two motors.</p>
 			
 		</section>
+		
+		<p align="center"><strong><font size="6">Stay tuned for updates!</font></strong></p>
+
+		<p align="center">This project is still underdevelopment as of <span id="currentDate"></span>. Currently, I am waiting to recieve the circuit boards from the manufaturer. </p>
+			
 
 			
 	</main>
@@ -104,6 +109,14 @@ function MM_swapImage() { //v3.0
             });
         });
     </script> 
+	
+	
+	<script>
+    // JavaScript code to display today's date
+    var currentDate = new Date();
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("currentDate").textContent = currentDate.toLocaleDateString(undefined, options);
+  </script>
 
 </body>
 </html>
