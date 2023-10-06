@@ -68,9 +68,7 @@ img {
 }
 
 #routerAnimation {
-    float: right;
 }
-
 
 
 
@@ -175,23 +173,16 @@ li {
 
 
 .projectObject1 {
-    display: block;
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-    padding-top: 17px;
-    padding-right: 17px;
-    padding-bottom: 17px;
-    padding-left: 17px;
-}
+        display: flex; /* Use Flexbox for horizontal alignment */
+        align-items: center; /* Vertically align the content to the center */
+    }
 
 .projectDescription {
-    max-width: 400px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block;
-}
+        flex: 1; /* Allow the text to grow and fill available space */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+
 .leftText {
     max-width: 473pt;
     display: inline-block;
