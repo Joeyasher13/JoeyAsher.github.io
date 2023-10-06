@@ -68,7 +68,7 @@ img {
 }
 
 #routerAnimation {
-    float: right;	
+    float: right;
 }
 
 
@@ -186,8 +186,7 @@ li {
 }
 
 .projectDescription {
-    max-width: 473pt;
-	
+    max-width: 400px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
