@@ -40,7 +40,7 @@
 				<h2>CNC Router</h2>
 
 
-				 <p>This project was a fun one, in it I built a CNC router with a workable volume of 46" x 46" x 4". Although most of the hardware for this project was bought from a supplier in China, the electronics where all build and designed by me. To get a better understanding of whats under the hood of a CNC machine, I used<a href="https://linuxcnc.org">LinuxCNC</a> as the control software. I put a lot of time into organizing all of the electronics into a control box, and although it doesn't look like a traditional controls box, it does a good job oraganizing all of the electronic components.</p>
+				 <p>This project was a fun one, in it I built a CNC router with a workable volume of 46" x 46" x 4". Although most of the hardware for this project was bought from a supplier in China, I was able to put together all of the electronics. To get a better understanding of whats under the hood of a CNC machine, I used<a href="https://linuxcnc.org">LinuxCNC</a> as the control software. I put a lot of time into organizing all of the electronics into a control box, and although it doesn't look like a traditional controls box, it does a good job oraganizing all of the electronic components.</p>
 				 
 			</section>
 			
@@ -49,42 +49,16 @@
 		</section>
 		
 		
-		<p>It was decied for the project to use split phase 240 VAC as the power for the router. It probably could have worked to run it on 120 VAC, but this gave me an me an excuse to get my parents to install a dedicated 50A 240VAC outlet in the garage. I am still trying to convince them to buy a welder, which is the second part to my master plan, but for now at least I have more than enough power for my CNC. The following hand-drawn schematic shows the basic power distribution for the system. Note that there are 4 breakers total, There is a 2 phase 40A breaker on the input, a 5A 2 phase breaker for the DC power supply, a 20A single phase breaker for the router, and finally a 20A single phase breaker to power a vacuum. This isn't the most detailed schematic, so some signals might be not be included, but it does give a good sense of the flow of power. An<a href="https://www.antekinc.com/ps-8n56-800w-56v-power-supply/">AnTek 800W 56V DC power supply</a>was used for this router to power the stepper motors. In addition, this power supply has 24V and 5V rails that are used for powering all the other DC components in the system.</p>
-		
-		<img class="centerIMG" src="CNC Router Images/AC Schematic.jpg" alt=""/>
-		
-		
-		<section class="projectObject1">
-			<section class="leftText">
-				 <p>As mentioned earlier, it was crucial to create an organized enclosure for all the electronic components. This required the fabrication of a few custom parts. The first custom part was the panel for the Aviation connectors. I designed this component using Fusion 360 and had it 3D printed by Xometry using an HP MultiJet Fusion printer, resulting in a beautifully crafted piece. However, there is an unfortunate flaw in this design that I overlooked before sending it out for manufacturing. I positioned the screws to secure the panel on the inside of the box, intending to hide the screw heads. Regrettably, this design choice makes it nearly impossible to add new connections to the panel, as you can't access the inside without removing everything from the box.</p>
-			</section>
+	<!-- Styled buttons to load subsections -->
+		<div class="subsection-buttons">
+			<button id="btnSubsection1">Hardware</button>
+			<button id="btnSubsection2">LinuxCNC</button>
+			<button id="btnSubsection3">CNC Projects</button>
+		</div>
 
-	    <img class="rightIMG" src="CNC Router Images/electronics connector plate.jpeg" alt=""/> 
-		</section>
-		
-		
-		
-		<section class="projectObject1">
-			<section class="leftText">
-				 <p>Here is a picture of the electronics enclosure with most of the AC components installed. There is a second layer of components that stack ontop of this that serves as the actual motor control interface.</p>
-			</section>
+		<!-- Add an iframe to display subsection content -->
+		<iframe id="subsectionFrame" frameborder="0" width="100%" height="600" onload="resizeIframe(this)"></iframe>
 
-	    <img class="rightIMG" src="CNC Router Images/electronics box mid build.jpeg" alt=""/> 
-		</section>
-		
-		
-		<section class="projectObject1">
-			<section class="leftText">
-				 <p>This shows the electronics enclosure with everything installed. You can see how tight of a squeeze it was to get it all in there. I am hoping to get more photos of the electronics posted here soon, but I don't currently have access to the machine.</p>
-			</section>
-
-	    <img class="rightIMG" src="CNC Router Images/electronics box connectors.jpeg" alt=""/> 
-		</section>
-		
-		<p align="center"><strong><font size="6">Stay tuned for updates!</font></strong></p>
-		<p alaign="center">There is a lot more to talk about here, but this is still a work in progress. Specificially, I want to dive into the controller, and explain how I made LinuxCNC work for me and the hardware I employed enable it. I also developed a small circuit board to drive climate control and lighting for the CNC control box, and this could also be a cool project to talk about. For now, here are some videos showing the CNC in action.</p>
-		
-		
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/0BLdh3dJ4Aw?si=3J31PjtIvc6KoBy5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		
 		
@@ -121,6 +95,42 @@
             });
         });
     </script> 
+	
+	
+	
+	<script>
+		// JavaScript for loading subsections into the iframe
+		const btnSubsection1 = document.getElementById('btnSubsection1');
+		const btnSubsection2 = document.getElementById('btnSubsection2');
+		const btnSubsection3 = document.getElementById('btnSubsection3');
+		const subsectionFrame = document.getElementById('subsectionFrame');
+
+		// Function to load the "Hardware" subsection when the page loads
+		window.addEventListener('load', function() {
+			subsectionFrame.src = 'hardware.html';
+		});
+
+		btnSubsection1.addEventListener('click', function() {
+			subsectionFrame.src = 'hardware.html';
+		});
+
+		btnSubsection2.addEventListener('click', function() {
+			subsectionFrame.src = 'linuxCNC.html';
+		});
+
+		btnSubsection3.addEventListener('click', function() {
+			subsectionFrame.src = 'CNCProjects.html';
+		});
+	</script>
+	
+	<script>
+		function resizeIframe(iframe) {
+			const contentHeight = iframe.contentWindow.document.body.scrollHeight;
+			const newHeight = contentHeight + 50; // Add 50px to the content height
+			iframe.style.height = newHeight + 'px';
+		}
+	</script>
+
 
 </body>
 </html>

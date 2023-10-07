@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 - Joey Asher - Designs and Projects</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- You can link to an external CSS file if needed -->
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+			<p>It was decied for the project to use split phase 240 VAC for the router. It probably could have worked to run it on 120 VAC, but this gave me an me an excuse to get my parents to install a dedicated 50A 240VAC outlet in the garage. I am still trying to convince them to buy a welder, which is the second part to my master plan, but for now at least I have more than enough power for my CNC. The following hand-drawn schematic shows the basic power distribution for the system. Note that there are 4 breakers total, There is a 2 phase 40A breaker on the input, a 5A 2 phase breaker for the DC power supply, a 20A single phase breaker for the router, and finally a 20A single phase breaker to power a vacuum. This isn't the most detailed schematic, so some signals might be not be included, but it does give a good sense of the flow of power. An<a href="https://www.antekinc.com/ps-8n56-800w-56v-power-supply/">AnTek 800W 56V DC power supply</a>was used for this router to power the stepper motors. In addition, this power supply has 24V and 5V rails that are used for powering all the other DC components in the system.</p>
+		
+		<img class="centerIMG" src="CNC Router Images/AC Schematic.jpg" alt=""/>
+		
+		
+		<section class="projectObject1">
+			<section class="leftText">
+				 <p>As mentioned earlier, it was crucial to create an organized enclosure for all the electronic components. This required the fabrication of a few custom parts. The first custom part was the panel for the Aviation connectors. I designed this component using Fusion 360 and had it 3D printed by Xometry using an HP MultiJet Fusion printer, resulting in a beautifully crafted piece. However, there is an unfortunate flaw in this design that I overlooked before sending it out for manufacturing. I positioned the screws to secure the panel on the inside of the box, intending to hide the screw heads. Regrettably, this design choice makes it nearly impossible to add new connections to the panel, as you can't access the inside without removing everything from the box.</p>
+			</section>
+
+	    <img class="rightIMG" src="CNC Router Images/electronics connector plate.jpeg" alt=""/> 
+		</section>
+		
+		
+		
+		<section class="projectObject1">
+			<section class="leftText">
+				 <p>Here is a picture of the electronics enclosure with most of the AC components installed. There is a second layer of components that stack ontop of this that serves as the actual motor control interface.</p>
+			</section>
+
+	    <img class="rightIMG" src="CNC Router Images/electronics box mid build.jpeg" alt=""/> 
+		</section>
+		
+		
+		<section class="projectObject1">
+			<section class="leftText">
+				 <p>This shows the electronics enclosure with everything installed. You can see how tight of a squeeze it was to get it all in there. I am hoping to get more photos of the electronics posted here soon, but I don't currently have access to the machine.</p>
+			</section>
+
+	    <img class="rightIMG" src="CNC Router Images/electronics box connectors.jpeg" alt=""/> 
+		</section>
+		
+		<p align="center"><strong><font size="6">Stay tuned for updates!</font></strong></p>
+		<p alaign="center">There is a lot more to talk about here, but this is still a work in progress. Specificially, I want to dive into the controller, and explain how I made LinuxCNC work for me and the hardware I employed enable it. I also developed a small circuit board to drive climate control and lighting for the CNC control box, and this could also be a cool project to talk about. For now, here are some videos showing the CNC in action.</p>
+
+			
+		<script>
+			// Send the content height to the parent window
+			window.addEventListener('load', function() {
+				const contentHeight = document.body.scrollHeight;
+				parent.postMessage({ height: contentHeight }, '*');
+			});
+		</script>
+
+</body>
+</html>
