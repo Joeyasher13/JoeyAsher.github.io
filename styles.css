@@ -11,12 +11,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
+	display: inline-block;
+}
+
+
+div {
+    display: flex;	
 }
 
 /* Styles for the header */
 header {
     
     display: inline-flex;
+	flex-direction: row;
     background-color: #fff; /* Background color for the header */
     font-family: 'Quicksand', sans-serif; 
     color: rgb(23, 23, 23); /* Text color for the header */
@@ -201,9 +208,9 @@ li {
 
 
 .projectObject1 {
-        display: flex; /* Use Flexbox for horizontal alignment */
-        align-items: center; /* Vertically align the content to the center */
-    }
+    display: flex;
+    align-items: center;
+}
 
 .projectDescription {
         flex: 1; /* Allow the text to grow and fill available space */
@@ -237,6 +244,10 @@ main {
     float: none;
     clear: none;
     list-style-type: none;
+	display: flex;
+	flex-direction: column;
+
+	
 }
 
 section {
