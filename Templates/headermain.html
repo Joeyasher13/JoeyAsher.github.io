@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+		@font-face {
+		font-family: 'Quicksand';
+		src: url('../Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
+		}
+		/* Styles for the title */
+		h1 {
+    text-decoration: underline;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em; /* Increase the font size for the name */
+    font-weight: 500; /* Ensure normal (non-bold) font weight */
+    border-top-left-radius: 0px;
+    padding-left: 30px;
+		}
+        /* Styles for the header */
+        body {
+            display: flex;
+			flex-direction: column;
+            background-color: #fff; /* Background color for the header */
+            font-family: 'Quicksand', sans-serif;
+            color: rgb(23, 23, 23); /* Text color for the header */
+        }
+        
+        nav ul {
+    display: flex;
+	flex-direction: row;
+    gap: 1em;
+    padding-top: 14px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgb(23, 23, 23);
+            padding-bottom: 6px;
+            padding-left: 6px;
+            left: 0mm;
+            right: 0mm;
+            bottom: 0mm;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            padding-right: 6px;
+            padding-top: 5px;
+        }
+
+        li {
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(23, 23, 23);
+    padding-right: 6px;
+        }
+
+        /* Center the "Projects" dropdown menu */
+        .dropdown {
+            position: relative; /* Make the parent li relative */
+            cursor: pointer;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content { /* Display dropdown when hovering over the parent li */
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Joey Asher</h1>
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="About/aboutme.html">About</a>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="camera gimble/cameragimble1.html">Camera Gimble Version 1</a>
+                        <a href="CNC router/cncrouter.html">CNC Router</a>
+                        <!-- Add more project links as needed -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
