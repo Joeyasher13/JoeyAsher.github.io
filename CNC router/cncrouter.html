@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css"> <!-- You can link to an external CSS file if needed -->
 	<title> CNC Router Project</title>
-
 	
-	
-	
-		<script type="text/javascript" src="slplayer.js"></script>
+	<script type="text/javascript" src="slplayer.js"></script>
 </head>
+	
 <body>
-
-    
-<header>
-<!-- Include the header container where the header will be inserted -->
-<div class="header-container"></div>
-</header>
+	<header>
+		<!-- Include the header container where the header will be inserted -->
+		<div class="header-container"></div>
+	</header>
     
 
     <main>
@@ -57,12 +53,24 @@
 
 	</main>
 
-    <footer>
-      <p>&copy; 2023 JAE Manufacturing and Design, Joey Asher</p>
-    </footer>
+	<footer>
+		<div id="footer-container"> </div>
+	</footer>
 
-	
-	
+
+	<!-- Scripts for loading the footer -->
+	<script>
+		const footerContainer = document.getElementById('footer-container');
+		const xhr = new XMLHttpRequest();
+		xhr.open('GET', '../Templates/footer.html', true);
+		xhr.onreadystatechange = function() {
+		  if (xhr.readyState === 4 && xhr.status === 200) {
+			footerContainer.innerHTML = xhr.responseText;
+		  }
+		};
+		xhr.send();
+	</script>
+
 	
 
 	<!-- Script for loading the current date -->
