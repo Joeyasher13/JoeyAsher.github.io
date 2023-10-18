@@ -8,17 +8,21 @@
     
     <style>
         /* CSS for link color */
-        #LRlinks a {
+        .LRlinks {
             color: #27374D;
         }
+		.resourceLinkBox {
+			
+		}
     </style>
 </head>
 
 <body>
     <section class="projectObject1">
         <section class="projectDescription">
-			<h2>Want to build your own?</h2>
-            <p>I've attached all the downloads needed to build your own light ring below, and I really encourage people to create their own LED Light ring!</p>
+			<h3>Want to build your own?</h3>
+            <p>Below are all the files needed to build your very own LED light ring. I am also working on a video showing my build process. You can also find the 3D models on my <a class="LRlinks" href="https://grabcad.com/library/led-light-ring-1">Grabcad</a> and the firmware on <a class="LRlinks" href="https://github.com/Joeyasher13/LED-Light-Ring">GitHub</a>.
+</p>
         </section>
 
     </section>
@@ -31,14 +35,36 @@
             
     </section>
 
+	<h3>Resources</h3>
     <!-- New section for links -->
-    <section id="LRlinks">
-        <h3>Resources</h3>
-        <ul>
-            <li><a href="downloads/124mm LED light ring v30.pdf" download>LRdownloads/124mm LED light ring v30.pdf</a> - Light Ring Schematic</li>
-            <li><a href="downloads/I2C Rotary encoder v3.pdf" download>LRdownloads/I2C Rotary encoder v3.pdf</a> - Control board Schematic</li>
-            <!-- Add more links and descriptions as needed -->
-        </ul>
+    <section class="projectObject1">
+        <section class="projectDescription">
+			<h4>Electronics</h4>
+			<ul class = "resourceLinkBox">
+				<li><a class="LRlinks" href="downloads/124mm LED light ring v30.pdf" download>LRdownloads/124mm LED light ring v30.pdf</a> - Light Ring Schematic</li>
+				<li><a class="LRlinks" href="downloads/I2C Rotary encoder v3.pdf" download>LRdownloads/I2C Rotary encoder v3.pdf</a> - Control board Schematic</li>
+				<!-- Add more links and descriptions as needed -->
+			</ul>
+		</section>
+        <section class="projectDescription">
+			<h4>Firmware</h4>
+			<ul class = "resourceLinkBox">
+				<li><a class="LRlinks" href="https://github.com/Joeyasher13/LED-Light-Ring">GitHub</a></li>
+				<!-- Add more links and descriptions as needed -->
+			</ul>
+		</section>
+    </section>
+	<section class="projectObject1">
+        <section class="projectDescription">
+			<h4>Parts</h4>
+			<ul class = "resourceLinkBox">
+				<li><a class="LRlinks" href="https://grabcad.com/library/led-light-ring-1">Grabcad</a></li>
+				<!-- Add more links and descriptions as needed -->
+			</ul>
+		</section>
+        <section class="projectDescription">
+			<h3>Thanks for looking, I hope you enjoy!</h3>
+		</section>
     </section>
 </body>
 </html>
