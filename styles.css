@@ -102,6 +102,17 @@ img {
     display: block;	
 }
 
+
+.iframe-container {
+	display: flex;
+	justify-content: center;
+}
+
+#subsectionFrame {
+	margin: 0 auto;
+}
+
+
 /**/
 /**/
 /* Style for the buttons */

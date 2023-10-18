@@ -62,16 +62,19 @@
 			<button id="btnSubsection1">Creating the Housing</button>
 			<button id="btnSubsection2">Electronics</button>
 			<button id="btnSubsection3">Photos and Renderings</button>
+			<button id="btnSubsection4">Build Your Own</button>
+			<button id="btnSubsection5">Whats Next</button>
 		</div>
 
 		<!-- Add an iframe to display subsection content -->
-		<iframe id="subsectionFrame" frameborder="0" width="100%" height="600" onload="resizeIframe(this)"></iframe>
-
+		<div class="iframe-container">
+			<iframe id="subsectionFrame" frameborder="0" width="80%" height="600" onload="resizeIframe(this)"></iframe>
+		</div>
 
 
 		<p align="center"><strong><font size="6">Stay tuned for updates!</font></strong></p>
 
-		<p align="center">This project is still underdevelopment as of <span id="currentDate"></span>. Right now I'm am waiting on the circuit boards from the manufacturer, and in the mean time I have been preparing the plastic housing.</p>
+		<p align="center">This project is still underdevelopment as of <span id="currentDate"></span>. I just recieved the LED circuit boards, but I have not ordered the controller boards. In the mean time, I am preoaring the housing and working on the diffuser.</p>
 
 	</main>
 
@@ -154,6 +157,8 @@
 		const btnSubsection1 = document.getElementById('btnSubsection1');
 		const btnSubsection2 = document.getElementById('btnSubsection2');
 		const btnSubsection3 = document.getElementById('btnSubsection3');
+		const btnSubsection4 = document.getElementById('btnSubsection4');
+		const btnSubsection5 = document.getElementById('btnSubsection5');
 		const subsectionFrame = document.getElementById('subsectionFrame');
 
 		// Function to load the "Hardware" subsection when the page loads
@@ -171,6 +176,14 @@
 
 		btnSubsection3.addEventListener('click', function() {   // this is the html that button 3 is attached to 
 			subsectionFrame.src = 'LRphotos.html';
+		});
+			
+		btnSubsection4.addEventListener('click', function() {   // this is the html that button 3 is attached to 
+			subsectionFrame.src = 'LRbyo.html';
+		});
+			
+		btnSubsection5.addEventListener('click', function() {   // this is the html that button 3 is attached to 
+			subsectionFrame.src = 'LRwhatsnext.html';
 		});
 	</script>
 
