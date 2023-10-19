@@ -157,7 +157,9 @@ img {
     list-style-type: none;
     padding: 1em; /* Remove default padding */
 }
-
+.LRlinks {
+            color: #27374D;
+}
 
 .show {
     display: block;
