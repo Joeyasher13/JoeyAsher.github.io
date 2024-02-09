@@ -114,7 +114,10 @@ img {
     text-align: center; /* Center the gallery title and images */
     padding: 20px; /* Add some padding around the section for spacing */
     border: 10px solid #526D82; /* Add a blue border */
-    border-radius: 15px; /* Round the edges */
+    border-radius: 15px;
+    max-width: 75%;
+	justify-content: center;
+
 }
 
 
