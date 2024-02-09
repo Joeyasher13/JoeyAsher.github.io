@@ -106,6 +106,68 @@ img {
     margin-left: 250px;
 }
 
+
+
+
+/* Style for the photo gallery section */
+#photo-gallery {
+    text-align: center; /* Center the gallery title and images */
+    padding: 20px; /* Add some padding around the section for spacing */
+    border: 10px solid #526D82; /* Add a blue border */
+    border-radius: 15px; /* Round the edges */
+}
+
+
+/* Style for the gallery container */
+.gallery-container {
+    margin: auto; /* Limit the width of the container to avoid very large images */
+    overflow: hidden; /* Hide overflow to keep everything neat */
+    position: relative; /* Set position for potential absolute positioning inside */
+    max-width: inherit;
+}
+
+/* Style for the main image */
+#galleryImage {
+    max-width: 100%; /* Ensure the image is responsive and fits its container */
+	max-height: 600px;
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+/* Style for the thumbnails container */
+#thumbnails {
+    display: flex; /* Use flexbox for the thumbnails for easy alignment and spacing */
+    overflow-x: auto; /* Allow horizontal scrolling for thumbnails */
+    justify-content: center; /* Center thumbnails in the container */
+    margin-top: 20px; /* Space between the main image and thumbnails */
+    padding: 10px; /* Padding on top and bottom */
+}
+
+/* Style for individual thumbnails */
+#thumbnails img {
+    width: 100px; /* Fixed width for thumbnails */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 5px; /* Margin around thumbnails for spacing */
+    cursor: pointer; /* Indicate thumbnails are clickable */
+    border-radius: 4px; /* Optional: rounded corners for thumbnails */
+    opacity: 0.6; /* Slightly fade thumbnails to distinguish from the main image */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#thumbnails img:hover, #thumbnails img:focus {
+    opacity: 1; /* Highlight thumbnail on hover/focus */
+}
+
+
+
+
+
+
+
+
+
+
+
 #LRlinks{
 	
 }

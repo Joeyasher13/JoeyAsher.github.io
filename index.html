@@ -29,6 +29,8 @@
 			if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 		}
 	</script>
+	
+
 </head>
 	
 <body>
@@ -40,6 +42,21 @@
 	<img id="Header" src="social pngs and rand format images/transisition.png" alt=""/> 
 
 	<main>
+		
+		
+		<section id="photo-gallery">
+			<h2>Recent Project photos</h2>
+			<div class="gallery-container">
+				<img id="galleryImage" src="Brag Photos/Screenshot 2023-12-29 at 10.23.24 PM.png" alt="Gallery Image" style="max-width: 100%; height: auto;">
+			</div>
+			<div id="thumbnails" style="display: flex; overflow: hidden; justify-content: center; margin-top: 20px;">
+				<!-- Thumbnails will be inserted here by JavaScript -->
+			</div>
+
+		</section>
+
+		
+		
 		<section class="projectLink">
 			<h2>Highlighted Projects</h2>
 		</section>
@@ -69,8 +86,9 @@
 				<p>LED Light Ring</p>
 			
 			</section>
-			
-		</section>
+		
+		</section>		
+		
 	</main>
 	
 	<footer>
@@ -131,6 +149,74 @@
 		}
 
 		document.addEventListener('DOMContentLoaded', loadHeader);
+	</script>
+	
+	
+	
+		
+	<script>
+		var imageList = [
+			"Brag Photos/controls_box.jpg",
+			"Brag Photos/dust_shoe.jpg",
+			"Brag Photos/bit_spotlight.jpg",
+			"Brag Photos/award_subsea.jpg",
+			"Brag Photos/updi_lr.jpg",
+			// Add more image URLs as needed
+		];
+
+		var currentImageIndex = 0;
+		var galleryImage = document.getElementById('galleryImage');
+		var thumbnailsContainer = document.getElementById('thumbnails');
+		var thumbnailElements = [];
+
+		function setMainImage(index) {
+			currentImageIndex = index;
+			galleryImage.src = imageList[currentImageIndex];
+			updateThumbnails();
+		}
+
+		function changeImage(next = true) {
+			currentImageIndex = next ? (currentImageIndex + 1) % imageList.length : (currentImageIndex - 1 + imageList.length) % imageList.length;
+			galleryImage.src = imageList[currentImageIndex];
+			updateThumbnails();
+		}
+
+		function createThumbnail(imageSrc, index) {
+			var imgElement = document.createElement('img');
+			imgElement.src = imageSrc;
+			imgElement.style.width = '100px';
+			imgElement.style.height = 'auto';
+			imgElement.style.margin = '0 5px';
+			imgElement.style.cursor = 'pointer';
+			imgElement.onclick = function() { setMainImage(index); clearInterval(autoFlip); autoFlip = setInterval(() => changeImage(), 5000); }; // Reset auto-flip on manual selection
+			thumbnailElements.push(imgElement);
+			thumbnailsContainer.appendChild(imgElement);
+		}
+
+		function updateThumbnails() {
+			thumbnailElements.forEach((elem, index) => {
+				elem.style.opacity = index === currentImageIndex ? '1' : '0.5';
+			});
+			// Adjust the order to create a loop-like appearance
+			let order = 0;
+			thumbnailElements.forEach((elem, index) => {
+				let positionIndex = index - currentImageIndex;
+				if (positionIndex < 0) {
+					positionIndex += imageList.length;
+				}
+				elem.style.order = positionIndex;
+			});
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			imageList.forEach((imageSrc, index) => {
+				createThumbnail(imageSrc, index);
+			});
+			setMainImage(0); // Initialize with the first image
+			autoFlip = setInterval(() => changeImage(), 5000); // Auto-flip images every 3 seconds
+		});
+
+		var autoFlip; // Variable to store the auto-flip interval for clearing/resetting
 	</script>
 
  
