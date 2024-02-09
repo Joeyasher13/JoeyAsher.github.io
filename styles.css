@@ -112,9 +112,6 @@ img {
 /* Style for the photo gallery section */
 #photo-gallery {
     text-align: center; /* Center the gallery title and images */
-    padding: 20px; /* Add some padding around the section for spacing */
-    border: 10px solid #526D82; /* Add a blue border */
-    border-radius: 15px;
     max-width: 65%;
     margin-left: auto; /* Center the element horizontally */
     margin-right: auto; /* Center the element horizontally */
