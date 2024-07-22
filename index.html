@@ -39,23 +39,25 @@
 		<div class="header-container"></div>
 	</header>
 	
-	<img id="Header" src="social pngs and rand format images/transisition.png" alt=""/> 
+	<img id="Header" src="Home Page Ancillary/Format Images/transisition.png" alt=""/> 
 
 	<main>
 		
 		
-		''
-		<section id="photo-gallery">
-			<h2>Recent Project photos</h2>
-			<div class="gallery-container">
-				<img id="galleryImage" src="Brag Photos/Screenshot 2023-12-29 at 10.23.24 PM.png" alt="Gallery Image" style="max-width: 100%; height: auto;">
+		<section class="horizontal-flex">
+			<div class="iframe-container large">
+				<iframe src="Home Page Ancillary/PhotoGallery.html" style="border:none;"></iframe>
 			</div>
-			<div id="thumbnails" style="display: flex; overflow: hidden; justify-content: center; margin-top: 20px;">
-				<!-- Thumbnails will be inserted here by JavaScript -->
+			<div class="iframe-container small">
+				<iframe src="Home Page Ancillary/ArticleLink.html" style="border:none;"></iframe>
 			</div>
-
 		</section>
 
+		
+		
+		
+		
+		
 		
 		
 		<section class="projectLink">
@@ -65,9 +67,9 @@
 		
 		<section class="projectLink">
 			<section class="projectLayout">
-				<a href="camera gimble/cameragimble1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('CameraGimblePNG','','camera gimble/Camera Gimble Images/filteredPNG.png',1)"><img id="CameraGimblePNG" src="camera gimble/Camera Gimble Images/PNG cutout.png" alt=""></a>
+				<a href="Camera Gimbal/CameraGimbal1.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('CameraGimbalPNG','','Camera Gimbal/Camera Gimbal Images/filteredPNG.png',1)"><img id="CameraGimbalPNG" src="Camera Gimbal/Camera Gimbal Images/PNG cutout.png" alt=""></a>
 
-				<p>Camera Gimble Controller<br>
+				<p>Camera Gimbal Controller<br>
 			    Version 1&nbsp;&nbsp;</p>
 				
 			</section>
@@ -153,72 +155,7 @@
 	</script>
 	
 	
-	
-		
-	<script>
-		var imageList = [
-			"Brag Photos/controls_box.jpg",
-			"Brag Photos/dust_shoe.jpg",
-			"Brag Photos/bit_spotlight.jpg",
-			"Brag Photos/award_subsea.jpg",
-			"Brag Photos/updi_lr.jpg",
-			// Add more image URLs as needed
-		];
 
-		var currentImageIndex = 0;
-		var galleryImage = document.getElementById('galleryImage');
-		var thumbnailsContainer = document.getElementById('thumbnails');
-		var thumbnailElements = [];
-
-		function setMainImage(index) {
-			currentImageIndex = index;
-			galleryImage.src = imageList[currentImageIndex];
-			updateThumbnails();
-		}
-
-		function changeImage(next = true) {
-			currentImageIndex = next ? (currentImageIndex + 1) % imageList.length : (currentImageIndex - 1 + imageList.length) % imageList.length;
-			galleryImage.src = imageList[currentImageIndex];
-			updateThumbnails();
-		}
-
-		function createThumbnail(imageSrc, index) {
-			var imgElement = document.createElement('img');
-			imgElement.src = imageSrc;
-			imgElement.style.width = '100px';
-			imgElement.style.height = 'auto';
-			imgElement.style.margin = '0 5px';
-			imgElement.style.cursor = 'pointer';
-			imgElement.onclick = function() { setMainImage(index); clearInterval(autoFlip); autoFlip = setInterval(() => changeImage(), 5000); }; // Reset auto-flip on manual selection
-			thumbnailElements.push(imgElement);
-			thumbnailsContainer.appendChild(imgElement);
-		}
-
-		function updateThumbnails() {
-			thumbnailElements.forEach((elem, index) => {
-				elem.style.opacity = index === currentImageIndex ? '1' : '0.5';
-			});
-			// Adjust the order to create a loop-like appearance
-			let order = 0;
-			thumbnailElements.forEach((elem, index) => {
-				let positionIndex = index - currentImageIndex;
-				if (positionIndex < 0) {
-					positionIndex += imageList.length;
-				}
-				elem.style.order = positionIndex;
-			});
-		}
-
-		document.addEventListener('DOMContentLoaded', function() {
-			imageList.forEach((imageSrc, index) => {
-				createThumbnail(imageSrc, index);
-			});
-			setMainImage(0); // Initialize with the first image
-			autoFlip = setInterval(() => changeImage(), 5000); // Auto-flip images every 3 seconds
-		});
-
-		var autoFlip; // Variable to store the auto-flip interval for clearing/resetting
-	</script>
 
  
 </body>

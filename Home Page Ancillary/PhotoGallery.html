@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <style>	
+		
+		h3 {
+			font-size: 2em; /* Increase the font size for the name */
+			font-family: 'Quicksand', sans-serif;
+			color: rgb(23, 23, 23); /* Text color for the header */
+			text-align: center;
+		}
+		
+		/* Style for the photo gallery section */
+		#photo-gallery {
+    text-align: center; /* Center the gallery title and images */
+    margin-left: auto; /* Center the element horizontally */
+    margin-right: auto; /* Center the element horizontally */
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+		}
+
+
+		/* Style for the gallery container */
+		.gallery-container {
+			margin: auto; /* Limit the width of the container to avoid very large images */
+			overflow: hidden; /* Hide overflow to keep everything neat */
+			position: relative; /* Set position for potential absolute positioning inside */
+			max-width: inherit;
+		}
+
+		/* Style for the main image */
+		#galleryImage {
+			max-width: 100%; /* Ensure the image is responsive and fits its container */
+			max-height: 600px;
+			width: auto; /* Maintain aspect ratio */
+			border-radius: 8px; /* Optional: rounded corners for the image */
+		}
+
+		/* Style for the thumbnails container */
+		#thumbnails {
+			display: flex; /* Use flexbox for the thumbnails for easy alignment and spacing */
+			overflow-x: auto; /* Allow horizontal scrolling for thumbnails */
+			justify-content: center; /* Center thumbnails in the container */
+			margin-top: 20px; /* Space between the main image and thumbnails */
+			padding: 10px; /* Padding on top and bottom */
+		}
+
+		/* Style for individual thumbnails */
+		#thumbnails img {
+			width: 100px; /* Fixed width for thumbnails */
+			height: auto; /* Maintain aspect ratio */
+			margin: 0 5px; /* Margin around thumbnails for spacing */
+			cursor: pointer; /* Indicate thumbnails are clickable */
+			border-radius: 4px; /* Optional: rounded corners for thumbnails */
+			opacity: 0.6; /* Slightly fade thumbnails to distinguish from the main image */
+			transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+		}
+
+		#thumbnails img:hover, #thumbnails img:focus {
+			opacity: 1; /* Highlight thumbnail on hover/focus */
+		}
+    </style>
+</head>
+<body>
+	
+	<h3>Recent Project Photos</h3>
+	
+    <section id="photo-gallery">
+        <div class="gallery-container">
+            <img id="galleryImage" src="Brag Photos/Screenshot 2023-12-29 at 10.23.24 PM.png" alt="Gallery Image" style="max-width: 100%; height: auto;">
+        </div>
+        <div id="thumbnails" style="display: flex; overflow: hidden; justify-content: center; margin-top: 20px;">
+            <!-- Thumbnails will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+	<script>
+		var imageList = [
+			"Brag Photos/controls_box.jpg",
+			"Brag Photos/dust_shoe.jpg",
+			"Brag Photos/bit_spotlight.jpg",
+			"Brag Photos/award_subsea.jpg",
+			"Brag Photos/updi_lr.jpg",
+			// Add more image URLs as needed
+		];
+
+		var currentImageIndex = 0;
+		var galleryImage = document.getElementById('galleryImage');
+		var thumbnailsContainer = document.getElementById('thumbnails');
+		var thumbnailElements = [];
+
+		function setMainImage(index) {
+			currentImageIndex = index;
+			galleryImage.src = imageList[currentImageIndex];
+			updateThumbnails();
+		}
+
+		function changeImage(next = true) {
+			currentImageIndex = next ? (currentImageIndex + 1) % imageList.length : (currentImageIndex - 1 + imageList.length) % imageList.length;
+			galleryImage.src = imageList[currentImageIndex];
+			updateThumbnails();
+		}
+
+		function createThumbnail(imageSrc, index) {
+			var imgElement = document.createElement('img');
+			imgElement.src = imageSrc;
+			imgElement.style.width = '100px';
+			imgElement.style.height = 'auto';
+			imgElement.style.margin = '0 5px';
+			imgElement.style.cursor = 'pointer';
+			imgElement.onclick = function() { setMainImage(index); clearInterval(autoFlip); autoFlip = setInterval(() => changeImage(), 5000); }; // Reset auto-flip on manual selection
+			thumbnailElements.push(imgElement);
+			thumbnailsContainer.appendChild(imgElement);
+		}
+
+		function updateThumbnails() {
+			thumbnailElements.forEach((elem, index) => {
+				elem.style.opacity = index === currentImageIndex ? '1' : '0.5';
+			});
+			// Adjust the order to create a loop-like appearance
+			let order = 0;
+			thumbnailElements.forEach((elem, index) => {
+				let positionIndex = index - currentImageIndex;
+				if (positionIndex < 0) {
+					positionIndex += imageList.length;
+				}
+				elem.style.order = positionIndex;
+			});
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			imageList.forEach((imageSrc, index) => {
+				createThumbnail(imageSrc, index);
+			});
+			setMainImage(0); // Initialize with the first image
+			autoFlip = setInterval(() => changeImage(), 5000); // Auto-flip images every 3 seconds
+		});
+
+		var autoFlip; // Variable to store the auto-flip interval for clearing/resetting
+	</script>
+
+</body>
+</html>
