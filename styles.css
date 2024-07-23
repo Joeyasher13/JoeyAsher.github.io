@@ -65,13 +65,7 @@ h4 {
     color: rgb(23, 23, 23); /* Text color for the header */
     text-align: center;
 	
-	
 
-	
-	
-
-	
-	
 	
 }
 img {
@@ -150,6 +144,10 @@ img {
     justify-content: center;
 }
 
+
+
+
+
 .iframe-container.large iframe {
     transform: scale(1);
 	
@@ -160,21 +158,10 @@ img {
 }
 
 
-
-
-
-
-
-
 #footer-container {
     display: block;	
 }
 
-
-
-#subsectionFrame {
-	margin: 0 auto;
-}
 
 
 /**/
