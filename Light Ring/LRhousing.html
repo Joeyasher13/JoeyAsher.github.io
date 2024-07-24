@@ -2,6 +2,39 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<style>
+		
+	.image-gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		width: 100%;
+	}
+
+	.image-container {
+		flex: 1 1 calc(33.333% - 10px);
+		margin: 5px;
+		position: relative;
+	}
+
+	.image-container img {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+	}
+
+	.caption {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		color: #fff;
+		text-align: center;
+		padding: 10px 0;
+		font-size: 16px;
+	}
+	</style>
 	<link rel="stylesheet" href="../styles.css">
 	<title>Light Ring Housing</title>
 </head>
@@ -9,17 +42,32 @@
 <body>
 	<section class="projectObject1">
 		<section class="projectDescription">
-			<p>Unfortunatly I don't have access to an SLS printer right now, and it didn't make sense in this project to get these parts professionally made, so instead I took the time to sand and polish some of the FDM printed parts to give the device a really nice clean look. </p>
+			<p>I printed the majority of the housing using PLA on my 3D printer. I took the time on one of the Light Rings to sand a polish the housing to give it a really smooth look. On the others I decided the print quality was good enough as is, so I left the layer lines.  </p>
 		</section>
 	</section>
 	
 	<section class="projectObject1">
 		<section class="projectDescription">
-			<p>I havent exactly decided how to make the diffuser, right now I have two options. The first choice is to mill it out of HDPE or another translucent plastic. Im leaning toward this option becuase I think it will come out looking really good, but I'm not sure how translucent the HDPE that I have is. The second option is to cast it out of polyurethane resin. I think this will still look nice, but I'm afraid there will be a lot of little bubbles. I think I might test both and see which one comes out better.</p>
+			<p>I ended up deciding to cast the diffuser in Polyurethane plastic. I created a four piece mold shown in the pictures below and used <a href="https://www.amazon.com/gp/product/B0BR8FQPM2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" target="_blank">PARTALL® Paste #2 Mold Release Wax</a> to prevent the cast parts from sticking to the 3D printed mold. As Polyurethane is a thermoset plastic, I couldn't press in heat set inserts. Instead I had to directlty cast them into the part. After the mold assembly was complete, I mixed a precise ammount of resin with a touch of white dye, and used a syringe to inject the plastic into the mold. </p>
 		</section>
 	</section>
 	
-		<section class="projectObject1">
+	    <div class="image-gallery">
+			<div class="image-container">
+				<img src="LRphotos/mold1.png" alt="Image 1">
+				<div class="caption">Brass inserts positioned in the mold prior to pouring resin</div>
+			</div>
+			<div class="image-container">
+				<img src="LRphotos/mold2.png" alt="Image 2">
+				<div class="caption">Injecting PolyUrethane resin into the assembled mold</div>
+			</div>
+			<div class="image-container">
+				<img src="LRphotos/mold3.png" alt="Image 3">
+				<div class="caption">Excess resin coming out of vents in the mold helps reduce trapped air</div>
+			</div>
+		</div>
+	
+	<section class="projectObject1">
 		<section class="projectDescription">
 			<p>The part I am most excited about in this project is the decals. To make them, the designs are printed on a normal sticker paper, laminated with clear vinyl, then cutout using a Cricut machine.</p>
 		</section>
