@@ -81,6 +81,7 @@
 			<button id="btnSubsection2">Electronics</button>
 			<button id="btnSubsection3">Photos and Renderings</button>
 			<button id="btnSubsection4">Build Your Own</button>
+			<button id="btnSubsection5">UDPI Programming</button>
 		</div>
 
 		<!-- Add an iframe to display subsection content -->
@@ -171,6 +172,7 @@
 		const btnSubsection2 = document.getElementById('btnSubsection2');
 		const btnSubsection3 = document.getElementById('btnSubsection3');
 		const btnSubsection4 = document.getElementById('btnSubsection4');
+		const btnSubsection5 = document.getElementById('btnSubsection5');
 		const subsectionFrame = document.getElementById('subsectionFrame');
 
 		// Function to load the "Hardware" subsection when the page loads
@@ -192,6 +194,10 @@
 			
 		btnSubsection4.addEventListener('click', function() {   // this is the html that button 3 is attached to 
 			subsectionFrame.src = 'PTFbyo.html';
+		});
+		
+		btnSubsection5.addEventListener('click', function() {   // this is the html that button 3 is attached to 
+			subsectionFrame.src = 'PTFupdi.html';
 		});
 			
 	</script>
